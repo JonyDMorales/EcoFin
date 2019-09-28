@@ -1,0 +1,99 @@
+@import "../../../styles";
+
+header{
+
+  background: #FFF;
+  width: 100%;
+  max-height: 100px;
+
+  nav {
+    width: 100%;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+
+    .nav-left{
+      margin: 3px 0;
+      width: 30%;
+      border: 2px solid black;
+      padding: 5px;
+      display: flex;
+      padding: 20px;
+      justify-content: space-around;
+      a {
+        text-align: center;
+        border-bottom: 1px solid transparent;
+        font-size: 18px;
+      }
+      a:hover {
+        border-bottom: 3px solid gray;
+      }
+    }
+
+    .nav-center{
+      margin: 3px 5px;
+      width: 30%;
+      border: 2px solid black;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      a {
+        text-align: center;
+        font-size: 18px;
+        width: 100%;
+        padding: 10px 20px;
+      }
+    }
+
+    .nav-right{
+      margin: 3px 5px;
+      width: 30%;
+      border: 2px solid black;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      a {
+        text-align: center;
+        font-size: 18px;
+        width: 100%;
+        padding: 10px 20px;
+        color: $colorVerde;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  header {
+    nav {
+      justify-content: space-around;
+    }
+  }
+  header {
+    nav {
+      .nav-right {
+        display: none;
+      }
+    }
+    }
+
+  header {
+    nav {
+      .nav-center {
+        order: 2;
+      }
+    }
+  }
+
+  header {
+    nav {
+      .nav-right {
+        order: 1;
+      }
+    }
+  }
+}
+

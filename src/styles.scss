@@ -4,6 +4,52 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*   COLORES    */
 $colorVerde: #32a852;
 
+
+/*   FUENTES    */
+@font-face {
+  font-family: "Glober-Black";
+  src: url("/assets/font/GLOBERBLACK.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Bold";
+  src: url("/assets/font/GLOBERBOLD.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Bold";
+  src: url("/assets/font/GLOBERBOLD.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Book";
+  src: url("/assets/font/GLOBERBOOK.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Heavy";
+  src: url("/assets/font/GLOBERHEAVY.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Light";
+  src: url("/assets/font/GLOBERLIGHT.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Regular";
+  src: url("/assets/font/GLOBERREGULAR.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Semibold";
+  src: url("/assets/font/GLOBERSEMIBOLD.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Thin";
+  src: url("/assets/font/GLOBERTHIN.OTF");
+}

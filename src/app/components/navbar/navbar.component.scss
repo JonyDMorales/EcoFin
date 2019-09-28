@@ -4,7 +4,8 @@ header{
 
   background: #FFF;
   width: 100%;
-  max-height: 100px;
+  border-bottom: 1px solid gray;
+  font-family: "Glober-Book";
 
   nav {
     width: 100%;
@@ -13,19 +14,17 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    //align-items: center;
 
     .nav-left{
-      margin: 3px 0;
+      margin: 10px 0;
       width: 30%;
-      border: 2px solid black;
-      padding: 5px;
+      //border-: 2px solid black;
       display: flex;
-      padding: 20px;
       justify-content: space-around;
+      align-items: center;
       a {
         text-align: center;
-        border-bottom: 1px solid transparent;
+        border-bottom: 3px solid transparent;
         font-size: 18px;
       }
       a:hover {
@@ -34,12 +33,12 @@ header{
     }
 
     .nav-center{
-      margin: 3px 5px;
+      margin: 10px 0;
       width: 30%;
-      border: 2px solid black;
-      padding: 20px;
+      //border: 2px solid black;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       a {
         text-align: center;
         font-size: 18px;
@@ -49,12 +48,12 @@ header{
     }
 
     .nav-right{
-      margin: 3px 5px;
+      margin: 10px 0;
       width: 30%;
-      border: 2px solid black;
-      padding: 20px;
+      //border: 2px solid black;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       a {
         text-align: center;
         font-size: 18px;
@@ -69,13 +68,16 @@ header{
 @media screen and (max-width: 600px){
   header {
     nav {
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
+
   header {
     nav {
       .nav-right {
-        display: none;
+        .divisas {
+          display: none;
+        }
       }
     }
     }
@@ -83,15 +85,15 @@ header{
   header {
     nav {
       .nav-center {
-        order: 2;
+
       }
     }
   }
 
   header {
     nav {
-      .nav-right {
-        order: 1;
+      .nav-left {
+        display: none;
       }
     }
   }

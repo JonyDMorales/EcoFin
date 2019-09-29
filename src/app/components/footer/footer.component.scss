@@ -1,0 +1,21 @@
+@import "../../../styles";
+
+
+footer{
+  width: 100%;
+  display: flex;
+  color: white;
+  flex-flow: column;
+
+  .eco-footer{
+    width: 100%;
+    background: $colorFondoObscuro;
+    height: 100px;
+  }
+
+  .copy-footer{
+    width: 100%;
+    background: $colorFondoNegro;
+    height: 100px;
+  }
+}

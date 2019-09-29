@@ -1,0 +1,10 @@
+@import "../../../styles";
+
+section{
+  background: $colorFondoProyect;
+  h2{
+    padding: 20px;
+    font-family: "Glober-Black";
+    font-size: $tamañoTitulosMedianos;
+  }
+}

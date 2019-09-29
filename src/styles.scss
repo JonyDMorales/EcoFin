@@ -5,8 +5,18 @@
   box-sizing: border-box;
 }
 /*   COLORES    */
-$colorVerde: #32a852;
+$colorTextoVerde: #00CC5E;
+$colorTextoGris: #808080;
+$colorBotonVerde: #00CC00;
+$colorFondoVerde: #00CC5E;
+$colorFondoObscuro: #1E1E1E;
+$colorFondoNegro: #000000;
+$colorFondoProyect: #F7F7F7;
 
+$tamañoTitulosGrandes: 40px;
+$tamañoTitulosMedianos: 30px;
+$tamañoTitulosPequeños: 20px;
+$tamañoTexto: 16px;
 
 /*   FUENTES    */
 @font-face {

@@ -1,0 +1,64 @@
+@import "../../../styles";
+
+section{
+  width: 100%;
+  height: 600px;
+  background: url("/assets/img/Imagen-Header.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  form{
+    display: flex;
+    flex-flow: column;
+
+    align-items: center;
+    background: white;
+    width: 30%;
+    height: 450px;
+    border-radius: 30px;
+    padding: 30px;
+
+    h2{
+      font-family: "Glober-Heavy";
+      font-size: $tamañoTitulosGrandes;
+      margin-bottom: 30px;
+    }
+
+    input{
+      padding: 20px 40px;
+      margin-bottom: 30px;
+      border-radius: 30px;
+      border: 0.6px solid $colorTextoGris;
+      font-family: "Glober-Book";
+      font-size: $tamañoTitulosPequeños;
+    }
+
+    input:focus{
+      border: 0.6px solid $colorBotonVerde;
+    }
+
+    button {
+      padding: 15px 50px;
+      border-radius: 40px;
+      background: $colorBotonVerde;
+      font-family: "Glober-Black";
+      font-size: 16px;
+      border: none;
+      color: white;
+      box-shadow: 9px 9px 18px 0px rgba(0,0,0,0.35);
+      margin-bottom: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $colorTextoVerde;
+      font-family: "Glober-Regular";
+      font-size: $tamañoTexto;
+    }
+
+  }
+}

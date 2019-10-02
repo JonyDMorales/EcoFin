@@ -1,0 +1,66 @@
+@import "../../../styles";
+
+footer{
+  width: 100%;
+  display: flex;
+  color: white;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .eco-footer{
+    width: 100%;
+    background: transparent;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .footer-img{
+      width: 100%;
+    }
+
+    .footer-contacto {
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      align-items: center;
+      p{
+        font-family: "Glober-Bold";
+        font-size: $tamañoTexto;
+      }
+    }
+
+    .footer-redes{
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      align-items: center;
+      a {
+        color: white;
+      }
+
+      .facebook:hover {
+        color: #3b5998;
+      }
+
+      .twitter:hover {
+        color: #55acee;
+      }
+      .instagram:hover {
+        color: #3f729b;
+      }
+    }
+  }
+
+  .copy-footer{
+    width: 100%;
+    padding: 10px;
+    font-family: "Glober-Bold";
+    font-size: $tamañoPequeño;
+    background: transparent;
+    text-align: center;
+  }
+}

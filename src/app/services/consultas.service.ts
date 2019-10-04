@@ -11,13 +11,13 @@ export class ConsultasService {
 
   constructor(private http: HttpClient) { }
 
-  public getAllProyects() {
-    const uri = this.url + 'get/persona';
+  public login(email, password) {
+    const uri = this.url + 'login';
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })};
-    return this.http.post(uri, { id: '5d9560482d4d1f216a6c2a02' }, httpOptions ).pipe( map(res => {
+    return this.http.post(uri, { email, password }, httpOptions ).pipe( map(res => {
       console.log(res);
       return res;
     }));

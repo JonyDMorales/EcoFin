@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
   constructor(private consultasService: ConsultasService) { }
 
   ngOnInit() {
-    this.consultasService.getAllProyects().subscribe();
+    this.consultasService.login('jony@stratosmex.com', '1234').subscribe(res => {
+
+    });
   }
 
 }

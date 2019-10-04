@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   constructor(private consultasService: ConsultasService) { }
 
   ngOnInit() {
-    this.consultasService.getAllProyects();
+
   }
 
 }

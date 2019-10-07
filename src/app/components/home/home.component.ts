@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ConsultasService} from '../../services/consultas.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +7,10 @@ import {ConsultasService} from '../../services/consultas.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private consultasService: ConsultasService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.consultasService.login('jony@stratosmex.com', '1234').subscribe(res => {
 
-    });
   }
 
 }

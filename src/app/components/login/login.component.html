@@ -1,13 +1,12 @@
 <div class="login">
   <section class="log">
-    <form action="" method="post">
+    <form (ngSubmit)="onSubmit(formLogin)" #formLogin="ngForm">
       <h2>Inicia sesión</h2>
-      <input type="email" placeholder="email" id="email" name="email" required>
-      <input type="password" placeholder="contraseña" id="password" name="password" required>
-      <button class="btn-log">Iniciar</button>
-      <a class="registrar"> O regístrarte</a>
+      <input [(ngModel)]="usuario.email" type="email" placeholder="email" id="email" name="email" required>
+      <input [(ngModel)]="usuario.password" type="password"  placeholder="contraseña" id="password" name="password" required>
+      <button class="btn-log" type="submit">Iniciar</button>
+      <a class="registrar"> O regístrarte </a>
     </form>
-
   </section>
 
   <app-footer-transparent></app-footer-transparent>

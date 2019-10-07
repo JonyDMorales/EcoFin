@@ -10,14 +10,22 @@ footer{
 
   .eco-footer{
     width: 100%;
-    background: $colorFondoObscuro;
     height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background: $colorFondoObscuro;
 
     .footer-img{
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img{
+        order: 1;
+        width: 90px;
+      }
     }
 
     .footer-contacto {
@@ -56,11 +64,20 @@ footer{
   }
 
   .copy-footer{
-    width: 100%;
-    padding: 10px;
-    font-family: "Glober-Bold";
-    font-size: $tamañoPequeño;
+   width: 100%;
+   padding: 10px;
+   font-family: "Glober-Bold";
+   font-size: $tamañoPequeño;
     background: $colorFondoNegro;
-    text-align: center;
+   text-align: center;
+ }
+}
+
+@mixin fondoFooter($colorFooter, $colorCopy){
+  .copy-footer{
+
+  }
+  .eco-footer {
+
   }
 }

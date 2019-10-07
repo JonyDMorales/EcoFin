@@ -1,30 +1,29 @@
 @import "../../../styles";
 
 header{
-
-  background: #FFF;
+  background: white;
   width: 100%;
-  border-bottom: 1px solid gray;
+  max-height: 70px;
   font-family: "Glober-Regular";
   font-size: $tamañoTitulosPequeños;
 
   nav {
     width: 100%;
-    color: $colorTextoGris;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
+    box-shadow: 9px 9px 18px 0px rgba(0,0,0,0.35);
     .nav-left{
-      margin: 10px 0;
       width: 30%;
-      //border-: 2px solid black;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      a {
+      a , a:visited{
+        cursor: pointer;
+        color: $colorTextoGris;
         text-align: center;
+        text-decoration: none;
         border-bottom: 3px solid transparent;
       }
       a:hover {
@@ -33,36 +32,41 @@ header{
     }
 
     .nav-center{
-      margin: 10px 0;
       width: 30%;
-      //border: 2px solid black;
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       a {
         text-align: center;
         width: 100%;
-        padding: 10px 20px;
+        img{
+          margin-top: 0;
+          width: 70px;
+        }
       }
     }
 
     .nav-right{
-      margin: 10px 0;
       width: 30%;
       //border: 2px solid black;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      a {
+      .login {
         text-align: center;
         width: 100%;
-        padding: 10px 20px;
-
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+          width: 40px;
+        }
       }
 
       .login{
         color: $colorTextoVerde;
         text-decoration: none;
+        cursor: pointer;
       }
 
       .dropdown-item{

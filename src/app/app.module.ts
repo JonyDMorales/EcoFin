@@ -16,6 +16,8 @@ import { RegistrerComponent } from './components/registrer/registrer.component';
 
 
 import { ConsultasService } from './services/consultas.service';
+import { HomeUserComponent } from './components/home-user/home-user.component';
+import { NewProyectComponent } from './components/new-proyect/new-proyect.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ConsultasService } from './services/consultas.service';
     FooterComponent,
     LoginComponent,
     FooterTransparentComponent,
-    RegistrerComponent
+    RegistrerComponent,
+    HomeUserComponent,
+    NewProyectComponent
   ],
   imports: [
     HttpClientModule,

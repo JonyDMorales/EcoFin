@@ -3,7 +3,7 @@
 <section class="new-proyect">
   <form  #formLogin="ngForm">
     <h2>Nuevo proyecto</h2>
-    <textarea rows="30" cols="30" placeholder="Foto del proyecto"></textarea>
+    <p appDropFile [file]="file" (mouseSobre)="archivoSobreDrop = $event"  [ngClass]="{'file-over': archivoSobreDrop}" >Foto del proyecto </p>
     <!--<input type="text" placeholder="nombre del proyecto" id="nombre" name="nombre" required>
     <input type="text"  placeholder="categoria" id="categoria" name="categoria" required>
 
@@ -12,8 +12,7 @@
     <input type="date"  placeholder="fecha de inicio" id="fechaInicio" name="fechaInicio" required>
     <input type="date"  placeholder="fecha de termino" id="fechaTermino" name="fechaTermino" required>-->
     <div class="btns">
-      <button class="btn-proy" type="submit">Crear</button>
-
+      <button (click)="onSubmit()" class="btn-proy" type="submit">Crear</button>
     </div>
 
   </form>

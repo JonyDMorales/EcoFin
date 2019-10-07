@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewProyectComponent implements OnInit {
 
+  file: File;
+  archivoSobreDrop = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log(this.file);
   }
 
 }

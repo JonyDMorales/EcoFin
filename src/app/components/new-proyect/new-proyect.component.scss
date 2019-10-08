@@ -10,7 +10,7 @@
 
 section {
   width: 100%;
-  height: 600px;
+  height: 1000px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -21,7 +21,7 @@ section {
     flex-flow: column;
     align-items: center;
     background: white;
-    width: 50%;
+    width: 70%;
     min-height: 450px;
     border-radius: 30px;
     padding: 30px;
@@ -41,20 +41,42 @@ section {
       max-height: 60px;
       max-width: 60%;
       min-width: 60%;
+      margin-bottom: 20px;
       border-radius: 20px 20px 0 0;
     }
 
+
+    .descripcion{
+      width: 60%;
+    }
     .file-over{
       border: solid 1px $colorBotonVerde;
     }
 
-    input {
+    input, select {
       padding: 20px 40px;
       margin-bottom: 30px;
       border-radius: 30px;
       border: 0.6px solid $colorTextoGris;
       font-family: "Glober-Book";
       font-size: $tamañoTitulosPequeños;
+    }
+
+    select {
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type='date']{
+      cursor: pointer;
+    }
+
+    .datos-1{
+      width: 60%;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
     }
 
     input:focus{

@@ -1,18 +1,32 @@
 <app-navbar></app-navbar>
 
 <section class="new-proyect">
-  <form  #formLogin="ngForm">
+  <form (ngSubmit)="onSubmit(formProyect)"  #formProyect="ngForm">
     <h2>Nuevo proyecto</h2>
-    <p appDropFile [file]="file" (mouseSobre)="archivoSobreDrop = $event"  [ngClass]="{'file-over': archivoSobreDrop}" >Foto del proyecto </p>
-    <!--<input type="text" placeholder="nombre del proyecto" id="nombre" name="nombre" required>
-    <input type="text"  placeholder="categoria" id="categoria" name="categoria" required>
+    <p appDropFile [proyect]="proyecto" (mouseSobre)="archivoSobreDrop = $event"  [ngClass]="{'file-over': archivoSobreDrop}" >
+      Foto del proyecto
+    </p>
+    <div class="datos-1">
+      <input [(ngModel)]="proyecto.nombre" type="text" placeholder="nombre del proyecto" id="nombre" name="nombre" required>
+      <select [(ngModel)]="proyecto.categoria" id="categoria" name="categoria">
+        <option selected value="agricultura"> Agricultura </option>
 
-    <input type="number"  placeholder="categoria" id="valor" name="valor" required>
-    <input type="text"  placeholder="pais" id="pasi" name="pais" required>
-    <input type="date"  placeholder="fecha de inicio" id="fechaInicio" name="fechaInicio" required>
-    <input type="date"  placeholder="fecha de termino" id="fechaTermino" name="fechaTermino" required>-->
+      </select>
+    </div>
+
+    <input [(ngModel)]="proyecto.descripcion" class="descripcion" type="text" id="descripcion" name="descripcion" placeholder="descripcion" required>
+
+    <div class="datos-1">
+      <input [(ngModel)]="proyecto.valorProyecto" type="number"  placeholder="valor estimado" id="valor" name="valor" required>
+      <input [(ngModel)]="proyecto.pais" type="text"  placeholder="pais" id="pasi" name="pais" required>
+    </div>
+    <div class="datos-1">
+      <input [(ngModel)]="proyecto.startDate" data-date-format="YYYY MM DD" type="text"  placeholder="fecha de inicio" id="fechaInicio" name="fechaInicio"  onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+      <input [(ngModel)]="proyecto.finishDate" type="text"  placeholder="fecha de termino" id="fechaTermino" name="fechaTermino" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+    </div>
+
     <div class="btns">
-      <button (click)="onSubmit()" class="btn-proy" type="submit">Crear</button>
+      <button class="btn-proy" type="submit">Crear</button>
     </div>
 
   </form>

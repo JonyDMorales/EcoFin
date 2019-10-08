@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ProyectModel} from '../../models/proyect.model';
+import {NgForm} from '@angular/forms';
+import {Router} from '@angular/router';
+import {ConsultasService} from '../../services/consultas.service';
 
 @Component({
   selector: 'app-new-proyect',
@@ -7,16 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewProyectComponent implements OnInit {
 
-  file: File;
+  proyecto: ProyectModel;
   archivoSobreDrop = false;
 
-  constructor() { }
+  constructor(private router: Router, private consultasService: ConsultasService) {
+    this.proyecto = new ProyectModel();
+  }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    console.log(this.file);
+  onSubmit(form: NgForm) {
+    if ( form.valid ) {
+      this.consultasService.saveProyect(this.proyecto).subscribe(res => {
+        this.router.navigate(['/user']);
+      });
+    }
+    console.log(form);
   }
 
 }

@@ -14,7 +14,7 @@
         <a class="dropdown-item" href="#">MXN</a>
         <a class="dropdown-item" href="#">USD</a>
       </div>
-      <a *ngIf="!usuario.token" [routerLink]="['/login']" class="login"> <img src="./assets/ico/icono-login.png"> Sing In | Registro </a>
+      <a *ngIf="!usuario.token" [routerLink]="['/login']" class="login"> <img src="./assets/ico/icono-login.png"> Sign In | Registro </a>
       <a *ngIf="usuario.token" (click)="logout()" class="login"> {{ this.usuario.nombre }}</a>
     </div>
   </nav>

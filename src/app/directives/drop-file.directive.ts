@@ -1,11 +1,12 @@
 import { Directive, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import {ProyectModel} from '../models/proyect.model';
 
 @Directive({
   selector: '[appDropFile]'
 })
 
 export class DropFileDirective {
-  @Input() file: File;
+  @Input() proyect: ProyectModel;
   @Output() mouseSobre: EventEmitter<boolean> = new EventEmitter();
 
   constructor() { }
@@ -23,7 +24,7 @@ export class DropFileDirective {
 
   @HostListener('drop', ['$event'])
   public onDrop( event: any ) {
-
+    this._prevenirDetener( event );
     const transferencia = this._getTransferencia( event );
 
     if ( !transferencia ) {
@@ -42,14 +43,14 @@ export class DropFileDirective {
   }
 
   private _extraerArchivos( archivosLista: FileList ) {
-
+    this.proyect = new ProyectModel();
     for ( const propiedad in Object.getOwnPropertyNames(archivosLista)) {
       const archivoTemporal = archivosLista[propiedad];
       if (this._archivoPuedeSerCargado(archivoTemporal)) {
-        this.file = archivoTemporal;
+        this.proyect.archivo = archivoTemporal;
       }
     }
-    console.log(this.file);
+    console.log(this.proyect);
   }
 
   private _archivoPuedeSerCargado( archivo: File ): boolean {

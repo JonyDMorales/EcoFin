@@ -11,28 +11,14 @@ import {ProyectModel} from '../../models/proyect.model';
 export class HomeUserComponent implements OnInit {
 
   usuario: UserModel;
-  proyects: ProyectModel[];
 
   constructor(private consultasService: ConsultasService) { }
 
   ngOnInit() {
     this.usuario = new UserModel();
-    this.usuario.nombre = localStorage.getItem("NOMBRE");
-    this.usuario.email = localStorage.getItem("EMAIL");
-    this.usuario.token = localStorage.getItem("USER_TOKEN");
-    this.proyects = new Array();
-    this.consultasService.getProyectos(this.usuario.token).subscribe(res => {
-
-      for (const pos in res ) {
-        this.setProyect(res[pos]);
-      }
-      console.log(this.proyects);
-    });
-  }
-
-  private setProyect( proyect: ProyectModel ) {
-    this.proyects.push(proyect);
-
+    this.usuario.nombre = localStorage.getItem('NOMBRE');
+    this.usuario.email = localStorage.getItem('EMAIL');
+    this.usuario.token = localStorage.getItem('USER_TOKEN');
   }
 
 }

@@ -1,10 +1,96 @@
 @import "../../../styles";
 
 section{
+  width: 100%;
   background: $colorFondoProyect;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column;
+  padding-bottom: 100px;
+
   h2{
     padding: 20px;
     font-family: "Glober-Black";
     font-size: $tamañoTitulosMedianos;
+    margin: 2% 1%;
+  }
+  .contenedor{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card{
+    background: white;
+    border-radius: 30px 30px;
+    width: 250px;
+    height: auto;
+    margin: 30px 100px;
+    margin-bottom: 30px;
+    box-shadow: 9px 10px 18px -5px rgba(0,0,0,0.41);
+    cursor: pointer;
+
+    .img-proyect{
+      background: url("/assets/img/Imagen-Header.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 30px 30px 0 0;
+      height: 90px;
+    }
+
+    .data-proyect{
+      padding: 30px;
+
+      h4{
+        font-family: "Glober-Heavy";
+        font-size: $tamañoTitulosPequeños;
+      }
+
+      p{
+        font-family: "Glober-Semibold";
+        font-size: $tamañoTexto;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .progress{
+        height: 10px;
+        background: $colorBotonVerde;
+        border-radius: 5px;
+        margin-bottom: 25px;
+      }
+
+      .valores{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        .conseguido{
+          font-family: "Glober-Bold";
+          font-size: $tamañoTexto;
+        }
+
+        .bar{
+          text-align: center;
+          font-size: $tamañoTitulosMedianos;
+          color: $colorTextoMeta;
+        }
+
+        .meta{
+          font-family: "Glober-Bold";
+          font-size: $tamañoTexto;
+          color: $colorTextoMeta;
+        }
+      }
+
+    }
+
+
   }
 }

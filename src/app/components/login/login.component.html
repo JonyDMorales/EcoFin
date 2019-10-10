@@ -5,7 +5,7 @@
       <input [(ngModel)]="usuario.email" type="email" placeholder="email" id="email" name="email" required>
       <input [(ngModel)]="usuario.password" type="password"  placeholder="contraseña" id="password" name="password" required>
       <button class="btn-log" type="submit">Iniciar</button>
-      <a class="registrar"> O regístrarte </a>
+      <a [routerLink]="['/new-user']" class="registrar"> O regístrarte </a>
     </form>
   </section>
 

@@ -19,6 +19,8 @@ import { ConsultasService } from './services/consultas.service';
 import { HomeUserComponent } from './components/home-user/home-user.component';
 import { NewProyectComponent } from './components/new-proyect/new-proyect.component';
 import { DropFileDirective } from './directives/drop-file.directive';
+import { ProyectComponent } from './components/proyect/proyect.component';
+import { NewUserComponent } from './components/new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { DropFileDirective } from './directives/drop-file.directive';
     RegistrerComponent,
     HomeUserComponent,
     NewProyectComponent,
-    DropFileDirective
+    DropFileDirective,
+    ProyectComponent,
+    NewUserComponent
   ],
   imports: [
     HttpClientModule,

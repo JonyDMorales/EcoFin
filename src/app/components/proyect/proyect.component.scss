@@ -1,0 +1,121 @@
+
+@import "../../../styles";
+
+section {
+  width: 100%;
+  margin-top: 70px;
+  .datos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .img{
+      margin: 0;
+      padding: 0;
+      background: url("/assets/img/Imagen-Header.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 30px;
+      width: 50%;
+      min-height: 300px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      button {
+        margin: 15px 50px;
+        padding: 15px 50px;
+        border-radius: 40px;
+        background: $colorBotonVerde;
+        cursor: pointer;
+        font-family: "Glober-Black";
+        font-size: 16px;
+        border: none;
+        color: white;
+        box-shadow: 9px 9px 18px 0px rgba(0,0,0,0.35);
+        margin-bottom: 30px;
+      }
+    }
+
+    .detalles{
+
+      h2{
+        font-family: "Glober-Heavy";
+        font-size: $tamañoTitulosMedianos;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      p{
+        font-family: "Glober-Bold";
+        font-size: $tamañoTexto;
+        margin-bottom: 10px;
+      }
+
+      .centrado{
+        text-align: center;
+
+        .progress{
+          height: 10px;
+          background: $colorBotonVerde;
+          border-radius: 5px;
+          margin-bottom: 25px;
+        }
+
+        .valores{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+
+          .conseguido{
+            font-family: "Glober-Bold";
+            font-size: $tamañoTexto;
+            text-align: center;
+          }
+
+          .bar{
+            text-align: center;
+            font-size: $tamañoTitulosMedianos;
+            color: $colorTextoMeta;
+          }
+
+          .meta{
+            font-family: "Glober-Bold";
+            font-size: $tamañoTexto;
+            color: $colorTextoMeta;
+            text-align: center;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .menu{
+    margin-top: 100px;
+    padding: 40px;
+    width: 100%;
+    background: $colorFondoGris;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Glober-Semibold";
+    font-size: $tamañoTitulosPequeños;
+
+  }
+
+  .descripcion{
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify-all;
+    p{
+      width: 70%;
+    }
+  }
+}

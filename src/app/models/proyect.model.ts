@@ -1,4 +1,5 @@
 export class ProyectModel {
+  id: string;
   archivo: File;
   rutaImg: string;
   nombre: string;

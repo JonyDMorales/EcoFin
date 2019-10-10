@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<section class="proyect">
+
+    <div class="datos">
+      <div class="img">
+        <button> Compartir </button>
+      </div>
+      <div class="detalles">
+        <h2>{{ proyect.nombre }} </h2>
+        <p>{{ proyect.descripcion }} </p>
+        <div class="centrado">
+          <p class="porcentaje"> {{ proyect.porcentaje }} % </p>
+          <div class="progress"></div>
+
+          <div class="valores">
+            <div class="conseguido">
+              {{ proyect.valorProyecto | currency }}
+              <p>Conseguido</p>
+            </div>
+            <div class="bar"> | </div>
+            <div class="meta">
+              {{ proyect.valorProyecto | currency }}
+              <p>Meta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="parte-uno"> Detalles del proyecto </div>
+      <div class="parte-dos"> Estadísticas </div>
+      <div class="parte-tres"> Comentarios </div>
+    </div>
+
+    <div class="descripcion">
+      <p>{{proyect.descripcion}}</p>
+    </div>
+
+</section>
+
+
+<app-footer></app-footer>

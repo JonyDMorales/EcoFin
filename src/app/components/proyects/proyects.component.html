@@ -1,4 +1,31 @@
 <section class="proyect">
-  <h2>Los favoritos</h2>
+  <h2>Tus proyectos</h2>
+
+  <div class="contenedor">
+
+    <div class="card" *ngFor="let proyect of proyects" (click)="viewProyect( proyect )">
+      <div class="img-proyect"></div>
+      <div class="data-proyect">
+        <h4> {{ proyect.nombre }} </h4>
+        <p> {{ proyect.descripcion }} </p>
+        <p class="porcentaje"> {{ proyect.porcentaje }} % </p>
+        <div class="progress"></div>
+        <div class="valores">
+          <div class="conseguido">
+            {{ proyect.valorProyecto | currency }}
+            <p>Conseguido</p>
+          </div>
+          <div class="bar"> | </div>
+          <div class="meta">
+            {{ proyect.valorProyecto | currency }}
+            <p>Meta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </section>
+
+<app-footer></app-footer>

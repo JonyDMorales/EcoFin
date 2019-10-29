@@ -8,8 +8,8 @@ import {ProyectModel} from '../models/proyect.model';
 })
 export class ConsultasService {
 
-  private url = 'http://ec2-54-158-130-38.compute-1.amazonaws.com:8080/';
-  //private url = 'http://localhost:8080/';
+  //private url = 'http://ec2-54-158-130-38.compute-1.amazonaws.com:8080/';
+  private url = 'http://localhost:8080/';
 
   constructor(private http: HttpClient) { }
 
